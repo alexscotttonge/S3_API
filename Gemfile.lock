@@ -42,6 +42,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   rspec
   rubocop
   simplecov
