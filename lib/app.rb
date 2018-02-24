@@ -6,9 +6,14 @@ class App
     end
   end
 
-  def check_first_name(account_id, first_name)
+  def check_first_name(account_id)
     json_to_hash.map do |account|
-      return first_name if account['id'] == account_id
+      if account['id'] == account_id
+        puts "First name: #{account['firstname']}"
+        puts "Last name: #{account['lastname']}"
+        puts "Email: #{account['email']}"
+        puts "Telephone: #{account['telephone']}"
+      end
     end
   end
 

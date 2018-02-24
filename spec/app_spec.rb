@@ -18,11 +18,12 @@ describe App do
     end
   end
 
-  describe '#check_first_name' do
-    it 'returns the first name of the account holder' do
+  describe '#check_account_details' do
+    it 'returns the account details of the account holder' do
       account_id = '8a28f09a-c234-4a95-b1e0-cdbc68979d0a'
-      first_name = 'Cyrus'
-      expect(app.check_first_name(account_id, first_name)).to eq 'Cyrus'
+      expect { app.check_first_name(account_id) }
+      .to output("First name: Cyrus\nLast name: David\nEmail: Cy.DAVI5969@dispostable.com\nTelephone: 01721 578054\n")
+      .to_stdout
     end
   end
 
