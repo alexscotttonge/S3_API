@@ -3,7 +3,7 @@ class App
   def json_to_hash
     file = File.read('./customer.json')
     data_hash = JSON.parse(file)
-    array_hash = data_hash['accounts']
+    data_hash['accounts']
   end
 
   def check_balance(account_id)
