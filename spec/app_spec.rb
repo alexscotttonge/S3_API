@@ -19,4 +19,13 @@ describe App do
     end
   end
 
+  describe '#check_first_name' do
+    it 'returns the first name of the account holder' do
+      app.json_to_hash
+      account_id = '8a28f09a-c234-4a95-b1e0-cdbc68979d0a'
+      first_name = 'Cyrus'
+      expect(app.check_first_name(account_id, first_name)).to eq 'Cyrus'
+    end
+  end
+
 end

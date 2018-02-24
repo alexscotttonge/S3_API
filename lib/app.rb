@@ -12,4 +12,10 @@ class App
     end
   end
 
+  def check_first_name(account_id, first_name)
+    json_to_hash.map do |account|
+      return first_name if account['id'] == account_id
+    end
+  end
+
 end
