@@ -27,4 +27,10 @@ describe App do
     end
   end
 
+  describe '#prints_overdrawn_guid' do
+    it 'prints the balances for all customers' do
+      expect { app.prints_overdrawn_guid }.to output.to_stdout
+    end
+  end
+
 end

@@ -17,6 +17,18 @@ class App
     end
   end
 
+  def prints_overdrawn_guid
+    json_to_hash.map do |account|
+      sanitized_balance = account['balance'].to_s
+      overdrawn_accounts = sanitized_balance.match(/^-\d*.\d*.\d*/)
+
+      if overdrawn_accounts
+        puts "Account GUID: #{account['id']}"
+      end
+
+    end
+  end
+
   private
 
   def json_to_hash
