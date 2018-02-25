@@ -21,7 +21,7 @@ describe App do
   describe '#check_account_details' do
     it 'returns the account details of the account holder' do
       account_id = '8a28f09a-c234-4a95-b1e0-cdbc68979d0a'
-      expect { app.check_first_name(account_id) }
+      expect { app.check_account_details(account_id) }
       .to output("First name: Cyrus\nLast name: David\nEmail: Cy.DAVI5969@dispostable.com\nTelephone: 01721 578054\n")
       .to_stdout
     end
