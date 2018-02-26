@@ -40,3 +40,6 @@ Then run tests:
 ```$ rspec```
 
 Test coverage: 100%
+
+## Notes
+- At the moment the json file is parsed with a hardcoded method. The customer and account holder data is kept separate using private methods. - With more time I would have used the GUID from the json file as an identifier for a URI request to set specific endpoints. 
