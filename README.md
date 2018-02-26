@@ -22,3 +22,21 @@ Your API should expose the data according to the following rules:
 - Outputs: account guid
 
 1.4 As the customer, I want to get the name, email address, telephone and balance for an account, so that I can contact them and talk about their account.
+
+## Run
+```
+$ git clone git@github.com:alexscotttonge/S3_API
+$ cd S3_API
+$ bundle install
+$ ruby app.rb
+```
+
+## Run tests
+Install ```rspec```
+
+```gem install rspec```
+
+Then run tests:
+```$ rspec```
+
+Test coverage: 100%
