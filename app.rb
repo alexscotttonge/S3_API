@@ -1,8 +1,6 @@
-require_relative 'account_holder'
-require_relative 'customer'
+require './lib/account_holder'
+require './lib/customer'
 require 'json'
-
-
 
 puts "Are you are an account holder (y/n)"
 
@@ -37,5 +35,7 @@ elsif answer == 'n'
       account_id = gets.chomp
       Customer.new.customer_account_check(account_id)
     end
+  elsif answer == 'n'
+    puts 'Sorry, you must be in the wrong place'
   end
 end
