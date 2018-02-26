@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AccountHolder do
 
-  let(:account_holder) { described_class.new }
+  subject(:account_holder) { described_class.new }
 
   describe '#check_balance' do
     it 'returns the correct balance for the account holder' do
