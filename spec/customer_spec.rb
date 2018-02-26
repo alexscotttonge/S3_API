@@ -4,6 +4,13 @@ describe Customer do
 
   subject(:customer) { described_class.new }
 
+  describe '#json_to_hash' do
+    it 'parses the customer json file' do
+      expected = helper_json
+      expect(customer.json_to_hash).to eq(expected)
+    end
+  end
+
   describe '#prints_overdrawn_guid' do
     it 'prints the balances for all customers' do
       expect { customer.prints_overdrawn_guid }.to output.to_stdout
